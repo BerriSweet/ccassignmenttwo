@@ -1,0 +1,3 @@
+name: Danny
+email: sampleemail321@fake.com
+password: password1234
