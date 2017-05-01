@@ -1,0 +1,44 @@
+<%= form_for(content) do |f| %>
+  <% if content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
+
+      <ul>
+      <% content.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= f.collection_select(:course_id, Course.all, :id, :name) %>
+
+  <div class="field">
+    <%= f.label :unit_One %>
+    <%= f.text_field :unit_One %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_Two %>
+    <%= f.text_field :unit_Two %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_Three %>
+    <%= f.text_field :unit_Three %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_Four %>
+    <%= f.text_field :unit_Four %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_Five %>
+    <%= f.text_field :unit_Five %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

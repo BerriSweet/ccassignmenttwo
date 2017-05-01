@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course: 
+  unit_One: MyString
+  unit_Two;string: MyString
+  unit_Three: MyString
+  unit_Four: MyString
+  unit_Five: MyString
+
+two:
+  course: 
+  unit_One: MyString
+  unit_Two;string: MyString
+  unit_Three: MyString
+  unit_Four: MyString
+  unit_Five: MyString

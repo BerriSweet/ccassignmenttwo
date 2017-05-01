@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @content.course %>
+</p>
+
+<p>
+  <strong>Unit one:</strong>
+  <%= @content.unit_One %>
+</p>
+
+<p>
+  <strong>Unit two:</strong>
+  <%= @content.unit_Two%>
+</p>
+
+<p>
+  <strong>Unit three:</strong>
+  <%= @content.unit_Three %>
+</p>
+
+<p>
+  <strong>Unit four:</strong>
+  <%= @content.unit_Four %>
+</p>
+
+<p>
+  <strong>Unit five:</strong>
+  <%= @content.unit_Five %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

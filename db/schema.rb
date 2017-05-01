@@ -10,15 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329013420) do
+ActiveRecord::Schema.define(version: 20170426014456) do
 
-  create_table "users", force: :cascade do |t|
+  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "course_id"
+    t.string   "unit_One"
+    t.string   "unit_Two"
+    t.string   "unit_Three"
+    t.string   "unit_Four"
+    t.string   "unit_Five"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_contents_on_course_id", using: :btree
+  end
+
+  create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.float    "price",      limit: 24
+    t.string   "info"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.integer  "access_level"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
 end

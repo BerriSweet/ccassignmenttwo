@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+ 
+  resources :contents
+  
+  resources :courses
+  
+  root to: 'welcome#homepage'
+  
+  get 'welcome/homepage'
+
   resources :users
  
   get 'login', to: 'sessions#new'
