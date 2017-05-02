@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   resources :courses
   
-  root to: 'welcome#homepage'
+  root to: 'sessions#new'
   
   get 'welcome/homepage'
 

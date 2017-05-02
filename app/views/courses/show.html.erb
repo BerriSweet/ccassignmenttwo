@@ -15,5 +15,18 @@
   <%= @course.info %>
 </p>
 
+<p>
+  <strong>Units:</strong>
+      <% if !@course.contents.blank? %>
+          <% @course.contents.each do  |c| %>
+            <%= c.unit_One %>
+            <%= c.unit_Two %>
+            <%= c.unit_Three %>
+            <%= c.unit_Four %>
+            <%= c.unit_Five %>
+          <%end%>
+        <%end%>
+</p>
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

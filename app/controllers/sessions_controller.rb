@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:session][:password])
     		log_in user
-    		redirect_to users_url
+    		redirect_to welcome_homepage_url
     else
     		flash.now[:danger] = 'Invalid credentials.'
     		render 'new'
