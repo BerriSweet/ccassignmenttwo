@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contents</h1>
 
-<table>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1"></div>
+  </div>
+  <h1>Contents</h1>
+<table class = "table">
   <thead>
     <tr>
       <th>Course</th>
@@ -31,7 +35,8 @@
     <% end %>
   </tbody>
 </table>
-
+<%= link_to 'New Content', new_content_path %>
+</div>
 <br>
 
-<%= link_to 'New Content', new_content_path %>
+
