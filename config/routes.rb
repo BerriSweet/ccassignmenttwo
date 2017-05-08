@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
  
   resources :contents
-  
   resources :courses
-  
+  resources :users
+  resources :sessions
+  resources :welcome
+
   root to: 'sessions#new'
   
   get 'welcome/homepage'
-
-  resources :users
  
   get 'login', to: 'sessions#new'
 

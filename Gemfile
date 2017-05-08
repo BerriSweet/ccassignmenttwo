@@ -48,6 +48,12 @@ group :development, :test do
 end
 
 group :development do
+	gem 'bullet'
+	gem 'rails_best_practices'
+	gem 'traceroute'
+end
+
+group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
