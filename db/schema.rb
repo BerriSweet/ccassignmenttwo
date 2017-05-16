@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170426014456) do
 
-  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "contents", force: :cascade do |t|
     t.integer  "course_id"
     t.string   "unit_One"
     t.string   "unit_Two"
@@ -21,25 +21,25 @@ ActiveRecord::Schema.define(version: 20170426014456) do
     t.string   "unit_Five"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_contents_on_course_id", using: :btree
+    t.index ["course_id"], name: "index_contents_on_course_id"
   end
 
-  create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "courses", force: :cascade do |t|
     t.string   "name"
-    t.float    "price",      limit: 24
+    t.float    "price"
     t.string   "info"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "access_level"
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

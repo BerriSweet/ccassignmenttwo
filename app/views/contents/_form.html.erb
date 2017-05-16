@@ -1,3 +1,5 @@
+<% if logged_in? %>
+
 <%= form_for(content) do |f| %>
   <% if content.errors.any? %>
     <div id="error_explanation">
@@ -43,4 +45,8 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
+
+<% else %>
+  <%= link_to "Log in", login_path %>
 <% end %>

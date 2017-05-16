@@ -6,8 +6,14 @@
     <div class="col-md-4"></div>
     </div>
 
-<p> <strong>to the Course Information Thing!!</strong></p>
-<div id='nekojo'>
-<%= image_tag 'nekojo.jpg' %>
-</div>
+ <% if logged_in? %>
+
+	<p> <strong>to the Course Information Thing!!</strong></p>
+	<div id='nekojo'>
+	<%= image_tag 'nekojo.jpg' %>
+	</div>
+
+<% else %>
+<% end %>
+
 </body>

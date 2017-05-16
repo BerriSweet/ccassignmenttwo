@@ -17,7 +17,7 @@ class ContentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create content" do
     assert_difference('Content.count') do
-      post contents_url, params: { content: { course: @content.course, unit_Five: @content.unit_Five, unit_Four: @content.unit_Four, unit_One: @content.unit_One, unit_Three: @content.unit_Three, unit_Two;string: @content.unit_Two;string } }
+      post contents_url, params: { content: { course: @content.course, unit_Five: @content.unit_Five, unit_Four: @content.unit_Four, unit_One: @content.unit_One, unit_Three: @content.unit_Three, unit_Two: @content.unit_Two} }
     end
 
     assert_redirected_to content_url(Content.last)
@@ -34,7 +34,7 @@ class ContentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update content" do
-    patch content_url(@content), params: { content: { course: @content.course, unit_Five: @content.unit_Five, unit_Four: @content.unit_Four, unit_One: @content.unit_One, unit_Three: @content.unit_Three, unit_Two;string: @content.unit_Two;string } }
+    patch content_url(@content), params: { content: { course: @content.course, unit_Five: @content.unit_Five, unit_Four: @content.unit_Four, unit_One: @content.unit_One, unit_Three: @content.unit_Three, unit_Two: @content.unit_Two} }
     assert_redirected_to content_url(@content)
   end
 
